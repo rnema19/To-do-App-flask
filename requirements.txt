@@ -1,0 +1,6 @@
+flask
+requests
+flask_sqlalchemy
+jinja
+psycopg2-binary
+psycopg2
