@@ -1,6 +1,6 @@
 flask
 requests
 flask_sqlalchemy
-jinja
+Jinja2
 psycopg2-binary
 psycopg2
