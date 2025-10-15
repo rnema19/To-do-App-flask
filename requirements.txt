@@ -4,3 +4,4 @@ flask_sqlalchemy
 Jinja2
 psycopg2-binary
 psycopg2
+dotenv
