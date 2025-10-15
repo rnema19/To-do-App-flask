@@ -1,5 +1,10 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 
 db = SQLAlchemy()
 
@@ -7,7 +12,7 @@ def create_app():
     app = Flask(__name__)
     
     app.config["SECRET_KEY"] = "football"
-    app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://cool_user:1234@localhost:5432/cool_db"
+    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("database_url")
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     
     db.init_app(app=app)
